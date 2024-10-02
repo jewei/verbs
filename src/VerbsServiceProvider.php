@@ -142,8 +142,6 @@ class VerbsServiceProvider extends PackageServiceProvider
             __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], "{$this->package->shortName()}-migrations");
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-
         if ($this->app->has('livewire')) {
             $manager = $this->app->make('livewire');
 
